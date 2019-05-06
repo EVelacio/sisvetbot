@@ -1,0 +1,14 @@
+Proyecto con la versión viejita de AdminLTE y PostgreSQL portable.
+
+Funciona la integración de menús al usar infyom para importar tablas.
+
+Tiene dos usuarios:
+
+admin@admin.com
+password
+
+y
+
+pgarcia1000@itslp.edu.mx
+123456 
+
