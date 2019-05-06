@@ -22,6 +22,7 @@ class ExtraCitas extends Migration
             $table->integer('citas_id')->unsigned()->nullable();
             $table->foreign('citas_id')->references('id')->on('citas')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');
             $table->timestamps();
 
         });

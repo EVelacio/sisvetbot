@@ -23,6 +23,7 @@ class Mascotas extends Migration
             $table->integer('razas_id')->unsigned()->nullable();
             $table->foreign('razas_id')->references('id')->on('razas')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');
             $table->timestamps();
             
 

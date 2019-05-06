@@ -26,3 +26,20 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('users_mass_destroy', ['uses' => 'Admin\UsersController@massDestroy', 'as' => 'users.mass_destroy']);
 
 });
+
+
+Route::resource('clientes', 'ClienteController');
+
+Route::resource('especies', 'EspecieController');
+
+Route::resource('mascotas', 'MascotaController');
+
+Route::resource('veterinarios', 'VeterinarioController');
+
+Route::resource('citas', 'CitaController');
+
+Route::resource('extraCitas', 'Extra_citaController');
+
+Route::resource('abonos', 'AbonoController');
+
+Route::resource('razas', 'RazaController');

@@ -20,6 +20,7 @@ class Razas extends Migration
             $table->integer('especies_id')->unsigned()->nullable();
             $table->foreign('especies_id')->references('id')->on('especies')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');
             $table->timestamps();
 
 

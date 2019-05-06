@@ -32,6 +32,7 @@ class Clientes extends Migration
             $table->integer('mascotas_id')->unsigned()->nullable();
             $table->foreign('mascotas_id')->references('id')->on('mascotas')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');
             $table->timestamps();
 
         });

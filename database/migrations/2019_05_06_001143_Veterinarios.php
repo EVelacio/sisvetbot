@@ -24,6 +24,7 @@ class Veterinarios extends Migration
             $table->integer('users_id')->unsigned()->nullable();
             $table->foreign('users_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');                
             $table->timestamps();
 
         });

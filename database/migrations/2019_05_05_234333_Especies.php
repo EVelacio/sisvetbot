@@ -17,6 +17,7 @@ class Especies extends Migration
         Schema::create('especies', function (Blueprint $table){
             $table->increments('id');
             $table->string('nombre');
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }

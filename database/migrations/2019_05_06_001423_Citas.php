@@ -32,6 +32,7 @@ class Citas extends Migration
             $table->integer('clientes_id')->unsigned()->nullable();
             $table->foreign('clientes_id')->references('id')->on('clientes')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamp('deleted_at');
             $table->timestamps();
 
         });
