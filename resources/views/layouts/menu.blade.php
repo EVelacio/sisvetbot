@@ -1,3 +1,10 @@
+@can('crear_cita')
+    <li class="{{ Request::is('citas*') ? 'active' : '' }}">
+        <a href="{!! route('citas.index') !!}"><i class="fa fa-edit"></i><span>Citas</span></a>
+    </li>
+@endcan
+
+
 <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
     <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
 </li>
@@ -14,9 +21,7 @@
     <a href="{!! route('veterinarios.index') !!}"><i class="fa fa-edit"></i><span>Veterinarios</span></a>
 </li>
 
-<li class="{{ Request::is('citas*') ? 'active' : '' }}">
-    <a href="{!! route('citas.index') !!}"><i class="fa fa-edit"></i><span>Citas</span></a>
-</li>
+
 
 <li class="{{ Request::is('extraCitas*') ? 'active' : '' }}">
     <a href="{!! route('extraCitas.index') !!}"><i class="fa fa-edit"></i><span>Extra Citas</span></a>

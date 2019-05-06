@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
 });
 
+Route::get('citass', 'CitaController@create');
+
 
 Route::resource('clientes', 'ClienteController');
 
@@ -36,7 +38,7 @@ Route::resource('mascotas', 'MascotaController');
 
 Route::resource('veterinarios', 'VeterinarioController');
 
-Route::resource('citas', 'CitaController');
+Route::resource('citas', 'CitaController')->middleware('can:crear_cita');
 
 Route::resource('extraCitas', 'Extra_citaController');
 
